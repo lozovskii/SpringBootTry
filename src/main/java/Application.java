@@ -14,19 +14,8 @@ public class Application extends WebMvcConfigurerAdapter {
         SpringApplication.run(Application.class, args);
     }
 
-//    @Bean(name = "HelloWorld")
-//    public ViewResolver viewResolver() {
-//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setViewClass(JstlView.class);
-//        viewResolver.setPrefix("/templates/");
-//        viewResolver.setSuffix(".jsp");
-//        return viewResolver;
-//    }
-
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("redirect:/users");//users
+        registry.addViewController("/").setViewName("redirect:/users");
     }
-
-
 }
